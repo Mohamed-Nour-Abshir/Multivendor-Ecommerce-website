@@ -3,9 +3,15 @@
     <div class="container">
 
         <div class="wrap-breadcrumb">
+            <div class="row"></div>
             <ul>
                 <li class="item-link"><a href="/" class="link">home</a></li>
                 <li class="item-link"><span>Digital & Electronics</span></li>
+                @if (Route::has('login'))
+                    @auth
+                        <li class="item-link"><a href="{{route('open-your-shop')}}" class="link btn btn-warning" style="color: #fff;">Open your shop</a></li>
+                    @endauth
+                @endif
             </ul>
         </div>
         <div class="row">

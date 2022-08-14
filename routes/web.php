@@ -36,6 +36,7 @@ use App\Http\Livewire\Admin\AdminProductAttributesComponent;
 use App\Http\Livewire\Admin\AdminSaleComponent;
 use App\Http\Livewire\Admin\AdminSettingsComponent;
 use App\Http\Livewire\ContactComponent;
+use App\Http\Livewire\OpenYourShop;
 use App\Http\Livewire\PolicyComponent;
 use App\Http\Livewire\ReturnPolicyComponent;
 use App\Http\Livewire\TermsAndConditionsComponent;
@@ -75,7 +76,7 @@ Route::get('/contact-us',ContactComponent::class)->name('contactus');
 Route::get('/return-policy',ReturnPolicyComponent::class)->name('retun_policy');
 Route::get('/policy',PolicyComponent::class)->name('policy');
 Route::get('/terms-conditions',TermsAndConditionsComponent::class)->name('termsandconditions');
-
+Route::get('/open-your-shop',OpenYourShop::class)->name('open-your-shop');
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');

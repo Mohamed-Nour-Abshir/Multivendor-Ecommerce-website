@@ -66,7 +66,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', HomeComponent::class);
 Route::get('/about', AboutComponent::class);
-Route::get('/shop', ShopComponent::class);
+Route::get('/shop', ShopComponent::class)->name('shop');
 Route::get('/cart', CartComponent::class)->name('product.cart');
 Route::get('/checkout', CheckoutComponent::class)->name('checkout');
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');

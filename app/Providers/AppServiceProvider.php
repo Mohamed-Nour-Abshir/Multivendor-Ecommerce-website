@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Providers;
-
+use App\Models\ShopSeller;
+use App\Observers\ShopObserver;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-
+        ShopSeller::observe(ShopObserver::class);
     }
 }

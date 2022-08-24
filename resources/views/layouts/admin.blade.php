@@ -131,6 +131,12 @@
               <span class="menu-title">Manage Categories</span>
             </a>
           </li>
+          <li class="nav-item {{ request()->is('*admin/categories*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{route('admin.manageshops')}}">
+              <i class="icon-grid fa-solid fa-certificate icon-grid menu-icon"></i>
+              <span class="menu-title">Manage Shops</span>
+            </a>
+          </li>
 
           <li class="nav-item {{ request()->is('*admin/products*') ? 'active' : '' }}">
             <a class="nav-link" href="{{route('admin.products')}}">

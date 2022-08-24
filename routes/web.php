@@ -28,8 +28,10 @@ use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminEditProduct;
 use App\Http\Livewire\Admin\AdminEditProductAttributeComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
+use App\Http\Livewire\Admin\AdminEditVendors;
 use App\Http\Livewire\Admin\AdminHomeCategoriesComponent;
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
+use App\Http\Livewire\Admin\AdminManageVendors;
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminProductAttributesComponent;
@@ -133,6 +135,10 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('/admin/attributes',AdminProductAttributesComponent::class)->name('admin.attributes');
     Route::get('/admin/attributes/add',AdminAddProductAttributeComponent::class)->name('admin.add_attributes');
     Route::get('/admin/attributes/edit/{attribute_id}',AdminEditProductAttributeComponent::class)->name('admin.edit_attributes');
+
+   //  manage shops 
+   Route::get('/admin/manage-shops',AdminManageVendors::class)->name('admin.manageshops');
+   Route::get('/admin/vendors/edit/{vendor_id}',AdminEditVendors::class)->name('admin.edit_vendors');
 });
 
 
